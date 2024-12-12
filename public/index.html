@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileShare.io</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FileShare.io</h1>
+        
+        <div class="qr-section">
+            <h2>Connect Device</h2>
+            <p>Scan this QR code with your mobile device to connect</p>
+            <img id="qrCode" class="qr-code" alt="QR Code">
+            <p id="serverUrl"></p>
+        </div>
+
+        <div class="file-section">
+            <h2>Share Files</h2>
+            <input type="file" id="fileInput">
+            <button onclick="uploadFile()">Upload & Share</button>
+            
+            <div class="received-files">
+                <h3>Received Files</h3>
+                <div id="fileList"></div>
+            </div>
+        </div>
+
+        <div class="text-section">
+            <h2>Share Text</h2>
+            <textarea id="messageInput" placeholder="Type a message to share..."></textarea>
+            <button onclick="sendMessage()">Send Message</button>
+            <div id="messages"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
